@@ -10,10 +10,10 @@ const PRODUCTION = process.env.PRODUCTION;
 const app = express();
 const corsOptions = { origin: PRODUCTION }
 
-app.use( express.json() );
-app.use( nodemailerRouter )
 app.use( cors( corsOptions ) );
+app.use( express.json() );
 app.use( bodyParser.urlencoded({ extended: false }) );
+app.use( nodemailerRouter )
 
 app.get('/', async (req, res) => {
     try
