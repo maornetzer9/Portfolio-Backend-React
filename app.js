@@ -18,7 +18,7 @@ app.use( nodemailerRouter )
 app.get('/', async (req, res) => {
     try
     {
-        return res.status(200).json('Backend Running...');
+        return res.status(200).json('Backend is Running...');
     }
     catch(err)
     {
